@@ -1,0 +1,21 @@
+.header{
+    -fx-background-color: linear-gradient(to bottom right, #2bff00, #0021a6);
+}
+.nav-form{
+    -fx-background-color: linear-gradient(to bottom right, #a621ff, #9c0303);
+}
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: #fff;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 16px;
+}
+.nav-btn:hover{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+}

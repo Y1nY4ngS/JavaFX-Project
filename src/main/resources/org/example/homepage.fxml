@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.HomepageController">
+   <children>
+      <AnchorPane fx:id="menu_form" prefHeight="600.0" prefWidth="1100.0">
+         <children>
+            <BorderPane layoutX="17.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="600.0" prefWidth="255.0" styleClass="nav-form" stylesheets="@homepageDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="114.0" prefWidth="270.0" styleClass="header" stylesheets="@homepageDesign.css" text="PC-World" textAlignment="CENTER" textFill="#d2ff3f">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="120.0" text="Welcome," textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nav_username" layoutX="135.0" layoutY="120.0" text="Montana88" textFill="#00e1ff">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="nav_homeBtn" layoutX="30.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@homepageDesign.css" text="Home" />
+                        <Button fx:id="nav_profileBtn" layoutX="30.0" layoutY="240.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@homepageDesign.css" text="Profile" />
+                        <Button fx:id="nav_checkoutBtn" layoutX="30.0" layoutY="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@homepageDesign.css" text="Checkout" />
+                        <Hyperlink fx:id="nav_signOut" layoutX="53.0" layoutY="551.0" styleClass="shadow" stylesheets="@homepageDesign.css" text="Sign Out" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="636.0" prefWidth="605.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ScrollPane fx:id="menu_scroll" layoutX="37.0" layoutY="40.0" prefHeight="600.0" prefWidth="554.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="552.0">
+                                 <children>
+                                    <GridPane fx:id="menu_grid" prefHeight="598.0" prefWidth="552.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <VBox prefHeight="180.0" prefWidth="150.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="CPU AMD" />
+                                                      <Label fx:id="prod_cost" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="200.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="1">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name1" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="CPU Intel" />
+                                                      <Label fx:id="prod_cost1" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="150.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner1" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn1" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="2">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name2" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="GPU Intel" />
+                                                      <Label fx:id="prod_cost2" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="200.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner2" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn2" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name3" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="GPU AMD" />
+                                                      <Label fx:id="prod_cost3" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="300.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner3" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn3" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name4" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="Nvidia AMD" />
+                                                      <Label fx:id="prod_cost4" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="500.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner4" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn4" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name5" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="MB Asus" />
+                                                      <Label fx:id="prod_cost5" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="250.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner5" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn5" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.rowIndex="2">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name6" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="MB MSI" />
+                                                      <Label fx:id="prod_cost6" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="260.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner6" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn6" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name7" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="RAM G.Skill" />
+                                                      <Label fx:id="prod_cost7" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="230.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner7" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn7" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name8" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="RAM Corsair" />
+                                                      <Label fx:id="prod_cost8" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="124.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner8" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn8" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.rowIndex="3">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name9" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="HD Samsung" />
+                                                      <Label fx:id="prod_cost9" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="77.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner9" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn9" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name10" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="HD WD" />
+                                                      <Label fx:id="prod_cost10" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="63.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner10" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn10" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="180.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="54.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label fx:id="prod_name11" alignment="CENTER" prefHeight="26.0" prefWidth="120.0" text="PSU Corsair" />
+                                                      <Label fx:id="prod_cost11" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="85.0" text="114.00$" textAlignment="RIGHT" />
+                                                   </children>
+                                                </HBox>
+                                                <AnchorPane prefHeight="11.0" prefWidth="150.0" />
+                                                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Spinner fx:id="prod_spinner11" prefHeight="28.0" prefWidth="62.0">
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </Spinner>
+                                                      <Button fx:id="prod_addBtn11" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="66.0" text="Add" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <right>
+                  <AnchorPane prefHeight="600.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="7.0" prefHeight="276.0" prefWidth="276.0" AnchorPane.bottomAnchor="324.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="menu_tableView" layoutX="38.0" layoutY="27.0" prefHeight="276.0" prefWidth="276.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="menu_col_product" minWidth="80.0" prefWidth="107.0" text="Product Name" />
+                                  <TableColumn fx:id="menu_col_quantity" minWidth="50.0" prefWidth="84.0" text="Quantity" />
+                                    <TableColumn fx:id="menu_col_price" minWidth="50.0" prefWidth="84.0" text="Price" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="76.0" layoutY="320.0" text="Total:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="menu_total" layoutX="138.0" layoutY="320.0" prefHeight="30.0" prefWidth="122.0" text="0.00$">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="menu_payBtn" layoutX="28.0" layoutY="383.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" text="Pay">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="menu_removeBtn" layoutX="28.0" layoutY="448.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Remove">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="menu_recipeBtn" layoutX="144.0" layoutY="448.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Recipe">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </right>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

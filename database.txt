@@ -1,0 +1,13 @@
+CPU: AMD,200.00
+CPU: Intel,150.00
+GPU: Intel, 200.00
+GPU: AMD, 300.00
+GPU: Nvidia, 500.00
+MB: Asus, 250.00
+MB: MSI, 260.00
+RAM: G.Skill, 230.00
+RAM: Corsair, 124.00
+HD: Samsung, 77.00
+HD: WD, 63.00
+PSU: Corsair, 114.00
+PSU Asus, 178.00
